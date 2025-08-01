@@ -1,0 +1,31 @@
+<h2>Template-Driven User Form</h2>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+      <label>
+        Name:
+        <input name="name" ngModel required />
+      </label>
+      <div *ngIf="userForm.submitted && !userForm.controls['name']?.valid">
+        Name is required.
+      </div>
+
+      <label>
+        Email:
+        <input name="email" ngModel required email />
+      </label>
+      <div *ngIf="userForm.submitted && !userForm.controls['email']?.valid">
+        Valid email is required.
+      </div>
+
+      <button type="submit" [disabled]="userForm.invalid">Submit</button>
+    </form>
+
+    <p *ngIf="submitted()">Form submitted successfully!</p>
+
+
+
+
+
+    <div *ngIf="user">
+      <h3>{{ user()?.name }}</h3>
+      <app-user-card [userId]="user()?.id"></app-user-card>
+    </div>

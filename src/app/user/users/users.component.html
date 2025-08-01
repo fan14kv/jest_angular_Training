@@ -1,0 +1,22 @@
+<h2>User Form</h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <label>
+        Name:
+        <input formControlName="name" />
+      </label>
+      <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched">
+        Name is required.
+      </div>
+
+      <label>
+        Email:
+        <input formControlName="email" />
+      </label>
+      <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+        Valid email is required.
+      </div>
+
+      <button appDisableOnClick type="" [disabled]="userForm.invalid">Submit</button>
+    </form>
+
+    <p *ngIf="submitted()">{{successMessage() | truncate:5}}</p>

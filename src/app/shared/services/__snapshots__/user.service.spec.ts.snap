@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserService addUser should add a user 1`] = `
+{
+  "id": "3",
+  "name": "Raja",
+}
+`;

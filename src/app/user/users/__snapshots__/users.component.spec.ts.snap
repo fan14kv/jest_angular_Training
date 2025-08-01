@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersComponent submit button should Enable the submit button when form is valid 1`] = `
+<app-users
+  submitted={[Function Function]}
+  successMessage={[Function Function]}
+  userForm={[Function FormGroup]}
+>
+  <h2>
+    User Form
+  </h2><form
+    class="ng-untouched ng-pristine ng-valid"
+    novalidate=""
+  >
+    <label>
+       Name: 
+      <input
+        class="ng-untouched ng-pristine ng-valid"
+        formcontrolname="name"
+      />
+    </label>
+    <label>
+       Email: 
+      <input
+        class="ng-untouched ng-pristine ng-valid"
+        formcontrolname="email"
+      />
+    </label>
+    <button
+      appdisableonclick=""
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</app-users>
+`;
