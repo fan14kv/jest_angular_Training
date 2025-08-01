@@ -8,7 +8,7 @@ describe('UserCardComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports:[UserCardComponent]
+      //imports:[UserCardComponent]
     });
     fixture = TestBed.createComponent(UserCardComponent);
     component = fixture.componentInstance;
